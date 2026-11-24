@@ -8,9 +8,9 @@
 
 
 #include <Arduino.h>
-#include "HelloPrinter.h"
+#include "Printer.h"
 
-HelloPrinter printer("YOOOOOO");
+Printer printer;
 
 void setup() {
   // put your setup code here, to run once:
@@ -18,11 +18,11 @@ void setup() {
   Serial.begin(115200);
   delay(2000);
   Serial.println("Starting...");
-  
+  printer.set_message("Hello");
 }
 
 void loop() {
-  printer.print_hello();
+  printer.print();
   delay(1000);
 }
 

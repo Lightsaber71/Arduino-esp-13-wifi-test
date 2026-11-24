@@ -1,6 +1,6 @@
 /**
- * @file HelloPrinter.h
- * @brief Declares the HelloPrinter class.
+ * @file Printer.h
+ * @brief Declares the Printer class.
  *
  * Provides a simple class for printing a customizable
  * greeting to the Arduino serial monitor.
@@ -14,13 +14,14 @@
 
 #include <Arduino.h>
 
-class HelloPrinter {
+class Printer {
 
 private:
     String message;
 
 public:
-    HelloPrinter(String message = "Hello");
+    Printer();
+    void set_message(const String& message);
+    void print();
 
-    void print_hello();
 };
