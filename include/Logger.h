@@ -18,6 +18,5 @@ class Logger {
 
 public:
     Logger();
-    void begin();
     void info(const String& message);
 };

@@ -15,13 +15,8 @@
 Logger::Logger() {
 }
 
-void Logger::begin() {
-    delay(1000);
-    Serial.begin(115200);
-    delay(1000);
-    Serial.println("Serial Logger successfully initialized...");
-}
-
 void Logger::info(const String& message) {
-    Serial.println(message);
+    if(Serial) {
+        Serial.println(message);
+    }
 }
