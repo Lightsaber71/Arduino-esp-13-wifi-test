@@ -1,6 +1,6 @@
 /**
- * @file Printer.h
- * @brief Declares the Printer class.
+ * @file Logger.h
+ * @brief Declares the Logger class.
  *
  * Provides a simple class for printing a customizable
  * greeting to the Arduino serial monitor.
@@ -14,14 +14,10 @@
 
 #include <Arduino.h>
 
-class Printer {
-
-private:
-    String message;
+class Logger {
 
 public:
-    Printer();
-    void set_message(const String& message);
-    void print();
-
+    Logger();
+    void begin();
+    void info(const String& message);
 };

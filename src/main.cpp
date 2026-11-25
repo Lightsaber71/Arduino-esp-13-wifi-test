@@ -8,21 +8,15 @@
 
 
 #include <Arduino.h>
-#include "Printer.h"
+#include "Logger.h"
 
-Printer printer;
+  Logger logger;
 
 void setup() {
-  // put your setup code here, to run once:
-  delay(5000);
-  Serial.begin(115200);
-  delay(2000);
-  Serial.println("Starting...");
-  printer.set_message("Hello");
 }
 
 void loop() {
-  printer.print();
+  logger.info("Hello");
   delay(1000);
 }
 
